@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
 import { FaArrowDown, FaGithub, FaLinkedin, FaEnvelope, FaCode, FaBrain, FaRocket, FaInstagram, FaTrophy, FaShieldAlt, FaNetworkWired } from 'react-icons/fa';
 import { ReactTyped as Typed } from 'react-typed';
-import Particles from 'react-tsparticles';
-import { loadFull } from 'tsparticles';
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim"; 
 import ResumeViewer from '../components/ResumeViewer';
 import './Home.css';
 
@@ -44,10 +44,21 @@ const Home = () => {
 
   const [ref1, inView1] = useInView({ threshold: 0.3, triggerOnce: true });
   const [ref2, inView2] = useInView({ threshold: 0.3, triggerOnce: true });
+  
+  const [ init, setInit ] = useState(false);
 
-  const particlesInit = async (main) => {
-    await loadFull(main);
-  };
+  // this should be run only once per application lifetime
+  useEffect(() => {
+      initParticlesEngine(async (engine) => {
+          // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+          // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+          // starting from v2 you can add only the features you need reducing the bundle size
+          await loadSlim(engine);
+      }).then(() => {
+          setInit(true);
+      });
+  }, []);
+
 
   const particlesLoaded = (container) => {
     console.log('Particles loaded', container);
@@ -69,10 +80,9 @@ const Home = () => {
 
   return (
     <div className="home">
-      <Particles
+      {init && <Particles
         id="tsparticles"
-        init={particlesInit}
-        loaded={particlesLoaded}
+        particlesLoaded={particlesLoaded}
         options={{
           background: {
             color: {
@@ -145,7 +155,7 @@ const Home = () => {
           },
           detectRetina: true,
         }}
-      />
+      />}
 
       {/* Hero Section */}
       <section className="hero">
@@ -461,4 +471,4 @@ const Home = () => {
   );
 };
 
-export default Home; 
+export default Home;

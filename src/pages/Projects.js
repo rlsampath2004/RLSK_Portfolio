@@ -267,17 +267,6 @@ const ProjectCard = ({
 };
 
 const Projects = () => {
-  // Attach global escape listener once
-  const [activeCard, setActiveCard] = useState(null);
-
-  useEffect(() => {
-    const onKey = (e) => {
-      if (e.key === 'Escape') setActiveCard(null);
-    };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
-  }, []);
-
   return (
     <div className="projects-page">
       <header className="projects-header">

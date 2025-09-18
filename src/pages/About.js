@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaCode, FaBrain, FaGraduationCap, FaMapMarkerAlt, FaDownload, FaJava, FaPython, FaHtml5, FaCss3Alt, FaChartBar } from 'react-icons/fa';
+import { FaCode, FaGraduationCap, FaMapMarkerAlt, FaDownload, FaJava, FaPython, FaHtml5, FaCss3Alt, FaChartBar } from 'react-icons/fa';
 import './About.css';
 
 const About = () => {

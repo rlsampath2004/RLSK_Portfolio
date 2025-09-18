@@ -6,7 +6,6 @@ const CyberCursor = () => {
   const [isClicking, setIsClicking] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const [trail, setTrail] = useState([]);
-  const [cursorText, setCursorText] = useState('');
   const cursorRef = useRef(null);
   const trailRef = useRef([]);
 
@@ -38,23 +37,6 @@ const CyberCursor = () => {
       setIsHovering(isInteractive);
       
       // Set cursor text based on element
-      if (target.matches('a[href^="mailto:"]')) {
-        setCursorText('EMAIL');
-      } else if (target.matches('a[href^="tel:"]')) {
-        setCursorText('CALL');
-      } else if (target.matches('a[href*="github"]')) {
-        setCursorText('CODE');
-      } else if (target.matches('a[href*="linkedin"]')) {
-        setCursorText('CONNECT');
-      } else if (target.matches('button[type="submit"]')) {
-        setCursorText('SEND');
-      } else if (target.matches('.project-card')) {
-        setCursorText('VIEW');
-      } else if (isInteractive) {
-        setCursorText('CLICK');
-      } else {
-        setCursorText('');
-      }
     };
 
     document.addEventListener('mousemove', updatePosition);
@@ -63,7 +45,6 @@ const CyberCursor = () => {
     document.addEventListener('mouseover', handleMouseOver);
     const handleMouseOut = () => {
       setIsHovering(false);
-      setCursorText('');
     };
 
     document.addEventListener('mouseout', handleMouseOut);
