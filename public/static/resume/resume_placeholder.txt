@@ -1,0 +1,50 @@
+RANGA LAKSHMAN SAMPATH KUMAR
+Software Developer | Machine Learning Enthusiast
+
+CONTACT INFORMATION
+Email: rlsampath2004@gmail.com
+Location: Macherla, Andhra Pradesh, India
+GitHub: https://github.com/rlsampath2004
+LinkedIn: [Your LinkedIn Profile]
+
+EDUCATION
+QIS College of Engineering and Technology
+Bachelor of Technology in Computer Science Engineering
+Expected Graduation: 2025
+
+TECHNICAL SKILLS
+Programming Languages: Java, Python, JavaScript, C++
+Web Technologies: React, HTML5, CSS3, Node.js
+Machine Learning: Scikit-learn, TensorFlow, Pandas, NumPy
+Databases: MySQL, MongoDB
+Tools & Technologies: Git, Docker, Maven, Jupyter Notebook
+
+PROJECTS
+1. DDoS Attack Classification System
+   - Developed advanced ML system for detecting and classifying DDoS attacks
+   - Achieved 96.8% accuracy using Random Forest algorithm
+   - Technologies: Python, Machine Learning, Scikit-learn, Pandas, NumPy
+
+2. Gaming Portfolio Website
+   - Built ultra-modern portfolio with advanced animations
+   - Implemented gaming aesthetics with particle systems
+   - Technologies: React, Framer Motion, CSS3, JavaScript
+
+3. Java Enterprise Application
+   - Developed enterprise-level application with Spring Boot
+   - Implemented microservices architecture and REST APIs
+   - Technologies: Java, Spring Boot, MySQL, Maven
+
+ACHIEVEMENTS
+- Solved 100+ problems on LeetCode
+- Achieved 500 rating on LeetCode platform
+- Earned 500 rating on CodeChef platform
+- Completed multiple technical certifications
+
+CERTIFICATIONS
+- Java Programming Certification
+- Machine Learning Fundamentals
+- Web Development Certification
+- Cybersecurity Basics
+
+Note: This is a placeholder file. Please replace with your actual PDF resume.

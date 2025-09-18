@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <!-- Windows-like arrow cursor, aqua blue, larger size for visibility -->
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0.4" dy="0.4" stdDeviation="0.6" flood-color="#003a3a" flood-opacity="0.5" />
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <!-- Classic arrow shape; tip is around (6,4) in viewBox -->
+    <path d="M6 4 L6 36 L14 28 L20 44 L25 42 L19.5 26.5 L30 26 Z" fill="#00ffff" stroke="#004a4a" stroke-width="1" stroke-linejoin="round"/>
+  </g>
+</svg>
